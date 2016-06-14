@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageZoomer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic" translatesAutoresizingMaskIntoConstraints="NO" id="A9r-OX-VqA" customClass="SPBBackgroundZommer" customModule="ImageZoomer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="600" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="9UJ-Nu-PZU"/>
+                                    <constraint firstAttribute="width" constant="240" id="fQO-fg-gLt"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fQO-fg-gLt"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <tableView clipsSubviews="YES" alpha="0.20000000000000001" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="efZ-hb-Xrp">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="efZ-hb-Xrp" secondAttribute="bottom" id="9Xb-C9-XcD"/>
+                            <constraint firstAttribute="trailing" secondItem="A9r-OX-VqA" secondAttribute="trailing" id="GlJ-Qg-Luy"/>
+                            <constraint firstItem="A9r-OX-VqA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Kza-V7-YBd"/>
+                            <constraint firstAttribute="trailing" secondItem="efZ-hb-Xrp" secondAttribute="trailing" id="NhK-yS-wjx"/>
+                            <constraint firstItem="A9r-OX-VqA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="l2v-to-3kq"/>
+                            <constraint firstItem="efZ-hb-Xrp" firstAttribute="top" secondItem="A9r-OX-VqA" secondAttribute="top" id="ndW-4q-3Ps"/>
+                            <constraint firstItem="efZ-hb-Xrp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="p1h-m3-tlf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ImageView" destination="A9r-OX-VqA" id="Lgb-qm-3aQ"/>
+                        <outlet property="TableView" destination="efZ-hb-Xrp" id="WuM-Dn-AcC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pic" width="1200" height="900"/>
+    </resources>
+</document>
